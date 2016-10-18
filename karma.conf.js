@@ -1,7 +1,7 @@
 // Karma configuration
-// Generated on Tue Oct 18 2016 00:26:05 GMT+0800 (中国标准时间)
+// Generated on Tue Oct 18 2016 18:07:55 GMT+0800 (CST)
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -15,15 +15,13 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '*.js'
+      '*.js',
+      '*.spec.js'
     ],
-    plugins: [require("karma-jasmine"),require("karma-chrome-launcher")],
+
 
     // list of files to exclude
     exclude: [
-      'Enter empty string to move to the next question.',
-      'Enter empty string to move to the next question.',
-      'Enter empty string to move to the next question.'
     ],
 
 
@@ -58,7 +56,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['Firefox'],
 
 
     // Continuous Integration mode
@@ -67,6 +65,7 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
+    concurrency: Infinity,
+    plugins: [require('karma-firefox-launcher'), require('karma-jasmine')]
   })
 }
